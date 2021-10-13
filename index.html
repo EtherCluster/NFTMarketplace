@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtherCluster NFT Marketplace</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+     -->
+</head>
+
+<body>
+    <div>
+        <button id="btnConnect">Connect Wallet</button>
+        <button id="btnUserInfo">Profile</button>
+        <button id="btnOpenCreateItem">Create</button>
+        <button id="btnMyItems">My Items</button>
+
+    </div>
+
+    <!--CAPTURE USER INFO-->
+    <div id="userInfo">
+        <h4>User Profile</h4>
+        <input type="text" id="txtUsername" required placeholder="Enter Username">
+
+        <input type="text" id="txtEmail" placeholder="Enter Email">
+        <small>Optional</small>
+
+        <img src="" id="imgAvatar" alt="" width="60px" height="60px">
+        <label for="fileAvatar">Select Avatar</label>
+        <input type="file" id="fileAvatar">
+
+
+        <button id="btnLogout">Log out</button>
+        <button id="btnCloseUserInfo">Close</button>
+        <button id="btnSaveUserInfo">Save</button>
+    </div>
+
+
+    <!--CREATE NFT-->
+    <div id="creatItem">
+        <h4>Create Item</h4>
+        <input type="text" id="txtCreateItemName" required placeholder="Enter Username">
+        <textarea id="txtCreateItemDescription" cols="30" rows="5" placeholder="Enter Description"></textarea>
+
+        <input type="number" min="1" step="1" id="numCreateItemPrice" required placeholder="Enter Price">
+        <label for="selectCreateItemStatus">Status</label>
+        <select id="selectCreateItemStatus">
+            <option value="0">Not for sale</option>
+
+            <option value="1">Instant buy</option>
+
+            <option value="2">Accept offers</option>
+
+        </select>
+
+
+        <label for="fileCreateItemFile">Select File</label>
+        <input type="file" id="fileCreateItemFile">
+
+
+        <button id="btnCloseCreateItem">Close</button>
+
+        <button id="btnCreateItem">Create!</button>
+    </div>
+
+    <div id="userItems">
+        <h4>My Items</h4>
+        <div id="userItemsList"></div>
+        <button id="btnCloseUserItems">Close</button>
+    </div>
+
+
+<div id="itemTemplate">
+    <img src="" alt="">
+    <h5></h5>
+    <p></p>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src='abi.js'></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
